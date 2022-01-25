@@ -93,7 +93,7 @@ awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/u
 }
 [[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' "◇ WAIT FOR INSTALLATION ◇" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' "◇ VPS MANAGER INSTALLING ◇" ; tput sgr0
 echo ""
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32m◇ UPDATING SYSTEM...\033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
