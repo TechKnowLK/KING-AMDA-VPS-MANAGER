@@ -53,7 +53,7 @@ echo ""
 echo -e "\033[1;32m◇ \033[1;32mTIP! \033[1;33mUSE THE DARK THEME IN YOUR TERMINAL \033[0m"
 echo -e "\033[1;33mFOR A BETTER EXPERIENCE AND VIEW OF IT!\033[0m"
 echo ""
-echo -e "\033[1;31m        ◇───────ㅤ❣️ㅤ42 SET EKA TEAM WORKㅤ❣️ㅤ───────◇\033[0m"             \033[1;37m   \033[1;31m
+echo -e "\033[1;31m      ◇───────ㅤ❣️ㅤ42 SET EKA TEAM WORKㅤ❣️ㅤ───────◇\033[0m"             \033[1;37m   \033[1;31m
 echo ""
 #-----------------------------------------------------------------------------------------------------------------
 echo -ne "\033[1;36m◇ Want to continue? [Y/N]: \033[1;37m"; read x
