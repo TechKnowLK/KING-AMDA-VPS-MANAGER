@@ -1,24 +1,18 @@
-## ◇────── KING AMDA VPS MANAGER ───────◇
+## ◇────── DRAGON VPS MANAGER ───────◇
 
 ㅤ
 <p align="left">
   <a href="" rel="noopener">
- <img width=550px height=550px src="https://i.ibb.co/BsL47Cf/king-amda.jpg" alt="logo"></a>
+ <img width=550px height=550px src="https://github.com/januda-ui/januda-ui/blob/main/icons/photo_2021-12-01_07-36-12.jpg?raw=true?raw=true" alt="logo"></a>
 </p>
 
 
 ## ㅤ
 
-<h2>___Update System Packages and Install SCRIPT___</h2>
-
-## <h4>First Use This Command</h4>
-```
-sudo -s
+___Update System Packages and Install SCRIPT___
 
 ```
-## <h4>Second Command</h4>
-```
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/TechKnowLK/KING-AMDA-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
 
 ```
 
@@ -101,7 +95,7 @@ ___Follow Us!___
  
 ___⚠️ Announcement ⚠️___
 
-<p><i>This script is not our own creation and we will be working on providing our own script soon.<i></p>
+<p><i>This script is not our own <a href="https://t.me/s/singledevelopers/">@SingleDevelopers</a> creation and we will be working on providing our own script soon.<i></p>
 
  
 ##  ㅤ

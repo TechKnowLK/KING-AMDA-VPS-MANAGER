@@ -62,7 +62,7 @@ chmod +x /etc/VPSManager/userteste/$nome.sh
 at -f /etc/VPSManager/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   👑ㅤKING AMDA VPS MANAGERㅤ👑  " 
+    echo -e "\033[1;32m  👑ㅤKING AMDA VPS MANAGERㅤ👑  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;31m◈─────⪧ IMPORTANT ⪦──────◈"
