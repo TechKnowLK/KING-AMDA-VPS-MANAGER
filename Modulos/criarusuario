@@ -339,7 +339,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		}
 		clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   👑ㅤKING AMDA VPS MANAGERㅤ👑  " 
+    echo -e "\033[1;32m   🐉ㅤDRAGON VPS MANAGERㅤ🐉  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;31m◈─────⪧ IMPORTANT ⪦──────◈"
@@ -368,12 +368,12 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m◈ DropBear ⌁  80"
     echo -e "\033[1;32m◈ BadVPN   ⌁  7300"
     echo ""
-    echo -e "\033[1;37m◈───⪧SCRIPT MAKE BY⪦────◈"
+    echo -e "\033[1;37m◈───⪧ONLINE USER COUNT⪦────◈ "
     echo ""
-    echo -e "\033[1;32mPasindu Samarasingha"
+    echo -e "\033[1;32mhttp://$IP:8888/server/online"
     echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m     ❣️ 42 SET EKA TEAM WORK ❣️"
+    echo -e "\033[1;37m©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
 		sleep 1
 		function aguarde() {
@@ -410,7 +410,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	} || {
 		clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   👑ㅤKING AMDA VPS MANAGERㅤ👑  " 
+    echo -e "\033[1;32m   🐉ㅤDRAGON VPS MANAGERㅤ🐉  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;31m◈─────⪧ IMPORTANT ⪦──────◈"
@@ -443,18 +443,14 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo ""
     echo -e "\033[1;32mhttp://$IP:8888/server/online"
     echo ""
-    echo -e "\033[1;37m◈───⪧SCRIPT MAKE BY⪦────◈"
-    echo ""
-    echo -e "\033[1;32mPasindu Samarasingha"
-    echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m     ❣️ 42 SET EKA TEAM WORK ❣️"
+    echo -e "\033[1;37m©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
 	}
 } || {
 	clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   👑ㅤKING AMDA VPS MANAGERㅤ👑  " 
+    echo -e "\033[1;32m   🐉ㅤDRAGON VPS MANAGERㅤ🐉  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;31m◈─────⪧ IMPORTANT ⪦──────◈"
@@ -487,11 +483,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo ""
     echo -e "\033[1;32mhttp://$IP:8888/server/online"
     echo ""
-    echo -e "\033[1;37m◈───⪧SCRIPT MAKE BY⪦────◈"
-    echo ""
-    echo -e "\033[1;32mPasindu Samarasingha"
-    echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m     ❣️ 42 SET EKA TEAM WORK ❣️"
+    echo -e "\033[1;37m©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
 }
