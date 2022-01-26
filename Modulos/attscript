@@ -70,7 +70,7 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "ㅤKINGAMDA VPS MANAGERㅤ" | figlet
+echo -e "ㅤKING AMDA VPS MANAGERㅤ" | figlet
 
 echo " "
 
