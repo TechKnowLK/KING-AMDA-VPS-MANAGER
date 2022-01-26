@@ -40,10 +40,10 @@ echo -e "${RED}$banner${SCOLOR}"
     }
     echo -e "$ns\n$chave" > $HOME/credenciais
 } || {
-    perg=$(echo "${SCOLOR}[y/n]: ")
+    perg=$(echo "${SCOLOR}[s/n]: ")
     echo -e "\n${YELLOW}THE SCRIPT IS ALREADY CONFIGURED WITH A\nSERVER AND READY FOR CONNECTION"
-    read -p "$(echo -e "${GREEN}WANT TO CONTINUE WITH THE SAME?${SCOLOR} [y/n]: ")" -e -i s opc
-    [[ "$opc" != @(y|sim|Y|SIM) ]] && {
+    read -p "$(echo -e "${GREEN}WANT TO CONTINUE WITH THE SAME?${SCOLOR} [s/n]: ")" -e -i s opc
+    [[ "$opc" != @(s|sim|S|SIM) ]] && {
         rm $HOME/credenciais dns > /dev/null 2>&1
         rm $PREFIX/bin/slowdns > /dev/null 2>&1
         sed -i '/slowdns/d' $PREFIX/etc/profile > /dev/null 2>&1

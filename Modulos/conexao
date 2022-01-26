@@ -500,7 +500,7 @@ SCOLOR='\033[0m'
                 echo -e "\n${YELLOW}BE AWARE THAT THIS METHOD IS UNSTABLE\nMAY OR MAY NOT WORK ON YOUR MACHINE\nBE AWARE OF THE RISKS ! ${SCOLOR}\n"
                 echo -ne "${GREEN}WISH TO CONTINUE INSTALLATION ? ${YELLOW}[y/n]:${SCOLOR} "
                 read resp
-                [[ "$resp" != @(y|sim|S|SIM) ]] && {
+                [[ "$resp" != @(s|sim|S|SIM) ]] && {
                     echo -e "\n${RED}Returning...${SCOLOR}"
                     sleep 2
                     conexao

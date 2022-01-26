@@ -14,7 +14,7 @@ installslowdns() {
     echo -e "\n${YELLOW}BE AWARE THAT THIS METHOD IS STILL IN THE BETA PHASE AND THAT BEYOND BEING SLOW IT MAY NOT WORK PERFECTLY ! ${SCOLOR}\n"
     echo -ne "${GREEN}DO YOU WANT TO CONTINUE THE INSTALLATION? ${YELLOW}[y/n]:${SCOLOR} "
     read resp
-    [[ "$resp" != @(y|sim|Y|SIM) ]] && {
+    [[ "$resp" != @(s|sim|S|SIM) ]] && {
 	    echo -e "\n${RED}Returning...${SCOLOR}"
 	    sleep 2
 	    conexao
