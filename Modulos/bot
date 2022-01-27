@@ -15,10 +15,11 @@ ShellBot.username
 fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
+        env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -31,20 +32,22 @@ fun_menu() {
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
+        env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
         return 0
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
+        env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -66,9 +69,10 @@ fun_ajuda() {
     }
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -106,9 +110,10 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -134,9 +139,10 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────◈</b>\n"
-        env_msg+="<b>👑 KINGAMDA VPS MANAGER BOT 👑</b>\n"
-        env_msg+="<b>◈───────────────────◈</b>\n\n"
+        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
