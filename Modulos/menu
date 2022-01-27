@@ -248,7 +248,7 @@ case "$x" in
    clear
    delscript
    ;;
-   30)
+   30) 
    menu
    ;;
    0|00)
