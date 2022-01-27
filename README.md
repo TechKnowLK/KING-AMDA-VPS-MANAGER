@@ -1,19 +1,25 @@
-## ◇────── DRAGON VPS MANAGER ───────◇
+## ◇────── KING AMDA VPS MANAGER ───────◇
 
 ㅤ
-<p align="left">
+<center><p align="left">
   <a href="" rel="noopener">
- <img width=550px height=550px src="https://github.com/januda-ui/januda-ui/blob/main/icons/photo_2021-12-01_07-36-12.jpg?raw=true?raw=true" alt="logo"></a>
-</p>
+ <img width=550px height=550px src="https://i.ibb.co/BsL47Cf/king-amda.jpg" alt="logo"></a>
+</p></center>
 
 
 ## ㅤ
 
 ___Update System Packages and Install SCRIPT___
 
+<h3>First Command</h3>
+
+```
+sudo -s
+```
+<h3>Second Command</h3>
+
 ```
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
-
 ```
 
 ## ㅤ
@@ -36,12 +42,9 @@ ___Screenshots___
   <summary><p><b>Click To View [Terminal] </b><div class="div0"> <span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143572065-ca450924-e72b-4041-ab31-3798618973f4.png" alt=""width="30"height="30"/><span><a href=""><img src="https://user-images.githubusercontent.com/83800532/144479843-ab04c6b5-9514-4863-b714-a1b391f42b27.png" alt=""width="30"height="30"/></a></span></p></summary></div>
 <br/>
 
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_ss_1.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_ss2.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_ss_3.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_ss_4.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_vps_5.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/dragon_ss_6.png" alt=""/></span></p>
+<p><span><img src="https://k.top4top.io/p_2218fwyxc1.png" alt=""/></span></p>
+<p><span><img src="https://g.top4top.io/p_2218p7zn12.png" alt=""/></span></p>
+<p><span><img src="https://f.top4top.io/p_2218hbn2s1.png" alt=""/></span></p>
 </details>
 
 
