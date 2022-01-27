@@ -70,8 +70,7 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="<b>◈────────────────────────────◈</b>\n"
-        env_msg+="<b>‐‐‐‐‐‐‐‐‐‐‐》》》》👑 KINGAMDA 👑《《《《‐‐‐‐‐‐‐‐‐‐</b>\n"
-        env_msg+="<b>《《《‐‐‐‐‐‐★彡 VPS MANAGER BOT 彡★‐‐‐‐‐》》》</b>\n"
+        env_msg+="<b>彡👑 KINGAMDA  VPS MANAGER BOT 👑彡</b>\n"
         env_msg+="<b>◈────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -95,7 +94,10 @@ fun_ajuda() {
         env_msg+="<b>• <u>RESALE</b></u> = Manage Resellers\n\n"
         env_msg+="<b>• <u>AUTOBACKUP</b></u> = On/Off Automatic Backup\n\n"
         env_msg+="<b>• <u>REPORT</b></u> = Information about resellers\n\n"
-        env_msg+="<b>• <u>HELP</b></u> = Information about options\n\n"
+        env_msg+="<b>• <u>HELP</b></u> = Information about options\n\n\n"
+        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
+        env_msg+="<b>彡❤️ 42 SET EKA TEAM WORK ❤️彡</b>\n"
+        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -111,8 +113,7 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="<b>◈────────────────────────────◈</b>\n"
-        env_msg+="<b>‐‐‐‐‐‐‐‐‐‐‐》》》》👑 KINGAMDA 👑《《《《‐‐‐‐‐‐‐‐‐‐</b>\n"
-        env_msg+="<b>《《《‐‐‐‐‐‐★彡 VPS MANAGER BOT 彡★‐‐‐‐‐》》》</b>\n"
+        env_msg+="<b>彡👑 KINGAMDA  VPS MANAGER BOT 👑彡</b>\n"
         env_msg+="<b>◈────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="<b>[01] /menu</b> = Display menu\n"
@@ -131,6 +132,9 @@ fun_ajuda() {
         env_msg+="<b>• <u>RESALE</b></u> = Manage Resellers\n\n"
         env_msg+="<b>• <u>REPORT</b></u> = Information about resellers\n\n"
         env_msg+="<b>• <u>HELP</b></u> = Information about options\n\n"
+        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
+        env_msg+="<b>彡❤️ 42 SET EKA TEAM WORK ❤️彡</b>\n"
+        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -190,7 +194,7 @@ fun_adduser() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👤 CREATE USER 👤\n\nUsername:" \
+            --text "<b>🙎‍♂️ CREATE USER 🙎‍♂️\n\n<i>Enter Username:</i></b>" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -654,7 +658,7 @@ monitor_ssh() {
                 [[ $conex -gt '0' ]] && {
                     timerr="$(ps -o etime $(ps -u $user | grep sshd | awk 'NR==1 {print $1}') | awk 'NR==2 {print $1}')"
                     info2+="------------------------------\n"
-                    info2+="👤$user       $conex/$lim       ⏳$timerr\n"
+                    info2+="🙎‍♂️$user       $conex/$lim       ⏳$timerr\n"
                 }
             done
             echo -e "$info2"
@@ -751,7 +755,7 @@ infovps() {
     [[ "$(netstat -nplt | grep 'python' | wc -l)" != '0' ]] && echo -e "Proxy Socks: $(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >>$PTs
     local info
     info="◈──────────────────◈\n"
-    info+="<b>SERVER INFORMATION</b>\n"
+    info+="<b>        SERVER INFORMATION</b>\n"
     info+="◈──────────────────◈\n\n"
     info+="<b>OPERATING SYSTEM</b>\n"
     info+="$system\n\n"
@@ -800,7 +804,7 @@ fun_download() {
     echo $_file2
     ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
         --document "@/etc/bot/arquivos/$_file" \
-        --caption "$(echo -e "<b>=====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>=====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" \
+        --caption "$(echo -e "<b>=====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>=====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n<b>◈──────────────────◈</b>\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" 
         --parse_mode html
     [[ -e "/root/$(awk -F " " '/Nome/ {print $2}' $_file2).ovpn" ]] && {
         ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
@@ -830,7 +834,7 @@ otimizer() {
     res=$(expr $MEM1 - $MEM2)
     local sucess
     sucess="◈──────────────────◈\n"
-    sucess+="<b>SUCCESSFULLY OPTIMIZED!</b>\n"
+    sucess+="<b>  SUCCESSFULLY OPTIMIZED!</b>\n"
     sucess+="◈──────────────────◈\n\n"
     sucess+="<i>Previous use</i> $MEM1%\n\n"
     sucess+="<b>Total Ram Memory</b> $ram1\n"
@@ -860,7 +864,7 @@ speed_test() {
     lnk=$(cat speed | sed -n '10 p' | awk {'print $NF'})
     local msg
     msg="◈──────────────────◈\n"
-    msg+="<b>🚀 SERVER SPEED 🚀</b>\n"
+    msg+="<b>         🚀 SERVER SPEED 🚀</b>\n"
     msg+="◈──────────────────◈\n\n"
     msg+="<b>PING/LATENCY:</b>$png\n"
     msg+="<b>DOWNLOAD:</b>$down\n"
@@ -913,7 +917,7 @@ fun_add_teste() {
         return 0
     elif [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:" \
+            --text "<b>🙎‍♂️ CREATE TEST SSH 🙎‍♂️\n\n<i>How Many Hours Should It Last EX: 1:</i></b>" \
             --reply_markup "$(ShellBot.ForceReply)"
     elif [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]]; then
         _limTotal=$(grep -w "${callback_query_from_username}" $ativos | awk '{print $4}')
@@ -925,7 +929,7 @@ fun_add_teste() {
             return 0
         } || {
             ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-                --text "👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:" \
+                --text "<b>🙎‍♂️ CREATE TEST SSH 🙎‍♂️\n\n<i>How Many Hours Should It Last EX: 1:</i></b>" \
                 --reply_markup "$(ShellBot.ForceReply)"
         }
     else
@@ -977,13 +981,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧TEST SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at  :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" \
+                --caption "$(echo -e "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧TEST SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at  :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈────⪧TEST SSH ACCOUNT ⪦────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at       :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" \
+            --text "$(echo -e "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈────⪧TEST SSH ACCOUNT ⪦────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at       :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>")" \
             --parse_mode html
         return 0
     }
@@ -1902,7 +1906,7 @@ while :; do
             if [[ ${message_reply_to_message_message_id[$id]} ]]; then
                 # Analisa a interface de resposta.
                 case ${message_reply_to_message_text[$id]} in
-                '👤 CREATE USER 👤\n\nUsername:')
+                '🙎‍♂️ <b>CREATE USER 🙎‍♂️\n\n<i>Enter Username:</b></i>')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ "$(awk -F : '$3 >= 1000 { print $1 }' /etc/passwd | grep -w ${message_text[$id]} | wc -l)" != '0' ]] && {
@@ -2013,7 +2017,7 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         break
                     }
@@ -2026,7 +2030,7 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌\n\n⚠️ use only letters [EX: Yes or No]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         break
                     }
@@ -2046,7 +2050,7 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                     }
                     ;;
@@ -2058,7 +2062,7 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌ \n\n⚠️ use only numbers [EX: 1]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               👑 KINGAMDA VPS MANAGER 👑   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>©️ ❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>      👑 KINGAMDA VPS MANAGER 👑</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>Pasindu Samarasingha</b>\n\n<b>◈──────────────────◈</b>\n\n<b>❣️ 42 SET EKA TEAM WORK ❣️</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         >$CAD_ARQ
                         break
@@ -2510,7 +2514,7 @@ while :; do
                     susp_rev $_VAR1
                     break
                     ;;
-                '👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:')
+                '<b>🙎‍♂️ CREATE TEST SSH 🙎‍♂️\n\n<i>How Many Hours Should It Last EX: 1:</i></b>')
                     verifica_acesso
                     echo $_erro
                     [[ "$_erro" == '1' ]] && break
