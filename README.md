@@ -6,7 +6,6 @@
  <img width=550px height=550px src="https://i.ibb.co/BsL47Cf/king-amda.jpg" alt="logo"></a>
 </p></center>
 
-
 ## ㅤ
 
 ___Update System Packages and Install SCRIPT___
@@ -36,27 +35,23 @@ ___Tutorial___
 
 ## ㅤ
 
-___Screenshots___
+<h1>Screenshots</h1>
+
 
 <details>
-  <summary><p><b>Click To View [Terminal] </b><div class="div0"> <span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143572065-ca450924-e72b-4041-ab31-3798618973f4.png" alt=""width="30"height="30"/><span><a href=""><img src="https://user-images.githubusercontent.com/83800532/144479843-ab04c6b5-9514-4863-b714-a1b391f42b27.png" alt=""width="30"height="30"/></a></span></p></summary></div>
+  <summary><h2><b>Click To View [Terminal]</b><div class="div0"> <span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143572065-ca450924-e72b-4041-ab31-3798618973f4.png" alt=""width="30"height="30"/><span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143560346-101a5bbb-53c6-4d1d-90c9-364c3355a6b7.png" alt=""width="30"height="30"/></a></span></h2></summary></div>
 <br/>
-
-<p><span><img src="https://k.top4top.io/p_2218fwyxc1.png" alt=""/></span></p>
-<p><span><img src="https://g.top4top.io/p_2218p7zn12.png" alt=""/></span></p>
-<p><span><img src="https://f.top4top.io/p_2218hbn2s1.png" alt=""/></span></p>
+    
+ <img width=450px height=450px src="https://f.top4top.io/p_22192szlu3.png" alt="logo"></a> <img width=450px height=450px src="https://d.top4top.io/p_22195etzq1.png" alt="logo"></a><br>
+ 
+ <img width=1000px src="https://d.top4top.io/p_2219rh6vs1.png" alt="logo"></a>
 </details>
 
-
 <details>
-  <summary><p><b>Click To View [Telegram Bot]</b><div class="div0"> <span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143572065-ca450924-e72b-4041-ab31-3798618973f4.png" alt=""width="30"height="30"/><span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143560346-101a5bbb-53c6-4d1d-90c9-364c3355a6b7.png" alt=""width="30"height="30"/></a></span></p></summary></div>
+  <summary><h2><b>Click To View [Telegram Bot]</b><div class="div0"> <span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143572065-ca450924-e72b-4041-ab31-3798618973f4.png" alt=""width="30"height="30"/><span><a href=""><img src="https://user-images.githubusercontent.com/83800532/143560346-101a5bbb-53c6-4d1d-90c9-364c3355a6b7.png" alt=""width="30"height="30"/></a></span></h2></summary></div>
 <br/>
-
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/ss4.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/ss3.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/ss1.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/ss2.png" alt=""/></span></p>
-<p><span><img src="https://github.com/januda-ui/januda-ui/blob/main/icons/Screenshot%20(41).png" alt=""/></span></p>
+    
+<img width=1000px  src="https://k.top4top.io/p_2219nmbw91.png" alt="logo"></a>
 </details>
 
 
@@ -76,29 +71,11 @@ ___Based on___
 </div>
  </p>
  
- ## ㅤ
- 
-___Credits___
 
-<p>see on <a href="https://github.com/januda-ui/DRAGON-VPS-MANAGER/wiki/Credits" target="_blank" rel="noopener">wiki</a></p>
-<p>see on <a href="https://telegra.ph/DRAGON-VPS-MANAGER-11-30" target="_blank" rel="noopener">Telegra.ph</a>&nbsp;</p>
-  <P><b><i> 💐💐 To everyone who gave me advice and ideas.💐💐 </i></b></p>
-
-## ㅤ
-
-___Follow Us!___
-
- <p>    
-<div class="div2">
- <span><a href="https://t.me/s/dragon_vps_manager"><img src="https://user-images.githubusercontent.com/83800532/143560346-101a5bbb-53c6-4d1d-90c9-364c3355a6b7.png" alt=""width="50"height="50"/></a></span>
- </div>
- </p>
- 
-## ㅤ
  
 ___⚠️ Announcement ⚠️___
 
-<p><i>This script is not our own <a href="https://t.me/s/singledevelopers/">@SingleDevelopers</a> creation and we will be working on providing our own script soon.<i></p>
+<p><i>This script is not our own  creation and we will be working on providing our own script soon.<i></p>
 
  
 ##  ㅤ
