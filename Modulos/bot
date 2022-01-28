@@ -145,7 +145,7 @@ fun_ajuda() {
         local env_msg
         env_msg="<b>◈───────────────────────────────◈</b>\n"
         env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
-        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>                    ★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
@@ -1961,7 +1961,7 @@ while :; do
                         --text 'Limite:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Enter Loging Limite:')
+                'Enter Limit:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
@@ -1991,7 +1991,7 @@ while :; do
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
 
-                'Enter Ssh Validity in Days:')
+                'Validity in days:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
