@@ -145,7 +145,7 @@ fun_ajuda() {
         local env_msg
         env_msg="<b>◈───────────────────────────────◈</b>\n"
         env_msg+="<b>                               👑 KINGAMDA 👑</b>\n"
-        env_msg+="<b>                    ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
@@ -1941,10 +1941,10 @@ while :; do
                     }
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Enter Password For SSH' \
+                        --text 'Senha:' \
                         --reply_markup "$(ShellBot.ForceReply)" # Força a resposta.
                     ;;
-                'Enter Password:')
+                'Senha:')
                     sizepass=$(echo -e ${#message_text[$id]})
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
@@ -1961,7 +1961,7 @@ while :; do
                         --text 'Limite:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Enter Limit:')
+                'Limite:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
