@@ -1944,7 +1944,7 @@ while :; do
                         --text 'Enter Password For SSH' \
                         --reply_markup "$(ShellBot.ForceReply)" # Força a resposta.
                     ;;
-                'Enter Password For SSH')
+                'Enter Password For SSH:')
                     sizepass=$(echo -e ${#message_text[$id]})
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
@@ -1961,7 +1961,7 @@ while :; do
                         --text 'Limite:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Limite:')
+                'Enter Max Loging Limite:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
@@ -1991,7 +1991,7 @@ while :; do
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
 
-                'Validity in days:')
+                'Enter Ssh Validity in Days:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ ${message_text[$id]} != ?(+|-)+([0-9]) ]] && {
