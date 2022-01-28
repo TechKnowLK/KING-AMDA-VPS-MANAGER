@@ -194,7 +194,7 @@ fun_adduser() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "<b>🙎‍♂️ CREATE USER 🙎‍♂️</b>\n\n<b><i>Enter Username:</i></b>" \
+            --text "🙎‍♂️ CREATE USER 🙎‍♂️\n\n<i>Enter Username:</i>" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -917,7 +917,7 @@ fun_add_teste() {
         return 0
     elif [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "<b>🙎‍♂️ CREATE TEST SSH 🙎‍♂️</b>\n\n<b><i>How Many Hours Should It Last EX: 1:</i></b>" \
+            --text "🙎‍♂️ CREATE TEST SSH 🙎‍♂️\n\n<i>How Many Hours Should It Last EX: 1:</i>" \
             --reply_markup "$(ShellBot.ForceReply)"
     elif [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]]; then
         _limTotal=$(grep -w "${callback_query_from_username}" $ativos | awk '{print $4}')
@@ -1906,7 +1906,7 @@ while :; do
             if [[ ${message_reply_to_message_message_id[$id]} ]]; then
                 # Analisa a interface de resposta.
                 case ${message_reply_to_message_text[$id]} in
-                '🙎‍♂️ <b>CREATE USER 🙎‍♂️</b>\n\n<b><i>Enter Username:</b></i>')
+                '🙎‍♂️ <CREATE USER 🙎‍♂️\n\nEnter Username:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     [[ "$(awk -F : '$3 >= 1000 { print $1 }' /etc/passwd | grep -w ${message_text[$id]} | wc -l)" != '0' ]] && {
@@ -2514,7 +2514,7 @@ while :; do
                     susp_rev $_VAR1
                     break
                     ;;
-                '<b>🙎‍♂️ CREATE TEST SSH 🙎‍♂️</b>\n\n<b><i>How Many Hours Should It Last EX: 1:</i></b>')
+                '🙎‍♂️ CREATE TEST SSH 🙎‍♂️\n\n<i>How Many Hours Should It Last EX: 1:</i>')
                     verifica_acesso
                     echo $_erro
                     [[ "$_erro" == '1' ]] && break
